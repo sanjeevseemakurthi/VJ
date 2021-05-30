@@ -1,0 +1,40 @@
+<div class="allignment">
+    <mat-card class="example-card">
+      <div *ngIf = edittrue>
+        <form class="example-form">
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label> Name </mat-label>
+                <input matInput type="text"  [(ngModel)]="persondata['name']" [ngModelOptions]="{standalone: true}"  disabled>
+              </mat-form-field></td>
+              <td>
+                <mat-card-actions>
+                  <button mat-flat-button color="accent" (click)=editperson()>edit</button>
+                </mat-card-actions>  
+              </td>
+            </tr></table>
+        </form>
+      </div>
+      <div *ngIf= !edittrue>
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Vinayaka jewls</mat-label>
+              <input matInput disabled value="VJ">
+            </mat-form-field>
+            <div *ngFor = "let temp of order">
+              <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>{{temp.columnHeading}}</mat-label>
+                  <input matInput type="text"  [(ngModel)]="persondata[temp.columnname]" [ngModelOptions]="{standalone: true}" required>
+                </mat-form-field></td>
+              </tr></table>
+            </div>
+            <mat-label *ngIf="notvalid" style="color: crimson;">{{message}}</mat-label>
+
+          </form>
+          <mat-card-actions>
+            <button mat-flat-button color="accent" (click)=saveperson()>save</button>
+          </mat-card-actions>    
+      </div>
+    </mat-card>
+</div>

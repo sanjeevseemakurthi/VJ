@@ -1,0 +1,21 @@
+.example-card {
+    height: 40%;
+    width: 50%;
+  }
+  .allignment{
+      padding-left:10%;
+      padding-top: 5%;
+      padding-right: 10%;
+  }
+  .example-form {
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+    font-size: 35px;
+  }

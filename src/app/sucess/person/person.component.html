@@ -1,0 +1,59 @@
+<div class="allignment">
+    <mat-card class="example-card">
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Vinayaka jewls</mat-label>
+              <input matInput disabled value="VJ">
+            </mat-form-field>
+          
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput type="text"  [(ngModel)]="Name" name="input1"  required>
+              </mat-form-field></td>
+            </tr></table>
+
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Father Name</mat-label>
+                <input matInput type="text"  [(ngModel)]="fname" name="input2" required>
+              </mat-form-field></td>
+            </tr></table>
+
+            <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Adress</mat-label>
+                  <input matInput type="text"  [(ngModel)]="address" name="input3"  required>
+                </mat-form-field></td>
+              </tr></table>
+          
+            <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>phone no</mat-label>
+                  <input matInput type="number"  [(ngModel)]="phoneno" name="input4" required >
+                </mat-form-field></td>
+              </tr></table>
+
+              <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Pincode</mat-label>
+                  <input matInput type="number"  [(ngModel)]=" pincode" name="input5" required >
+                </mat-form-field></td>
+              </tr></table>
+
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Book No</mat-label>
+                <input matInput placeholder="Ex. 208" type="number"  [(ngModel)]="bookno" name="input6" required >
+              </mat-form-field></td>
+            </tr></table>
+         
+            <mat-label *ngIf="notvalid" style="color: crimson;">{{message}}</mat-label>
+
+          </form>
+          
+          <mat-card-actions>
+            <button mat-flat-button color="accent" (click)=addperson()>save</button>
+          </mat-card-actions>
+    </mat-card>
+</div>

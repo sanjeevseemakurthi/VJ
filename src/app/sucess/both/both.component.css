@@ -1,0 +1,17 @@
+
+  .example-card {
+    height: 60%;
+  }
+  .allignment{
+      padding-left:10%;
+      padding-top: 5%;
+      padding-right: 10%;
+  }
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
